@@ -214,33 +214,44 @@ const Navbar = () => {
                           : setIsResourcesOpen(false)
                       }
                     >
-                      <button
-                        className={`px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-1 relative ${
-                          isActive(item.href)
-                            ? "text-purple-600"
-                            : "text-gray-700 hover:text-purple-600"
-                        }`}
-                      >
-                        <span>{item.name}</span>
-                        <svg
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            (item.isServices && isServicesOpen) ||
-                            (!item.isServices && isResourcesOpen)
-                              ? "rotate-180"
-                              : ""
+                      <div className="flex items-center space-x-1">
+                        <Link
+                          href={item.href}
+                          className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                            isActive(item.href)
+                              ? "text-purple-600"
+                              : "text-gray-700 hover:text-purple-600"
                           }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </button>
+                          {item.name}
+                        </Link>
+                        <button
+                          className={`p-1 text-sm font-medium transition-colors duration-200 ${
+                            isActive(item.href)
+                              ? "text-purple-600"
+                              : "text-gray-700 hover:text-purple-600"
+                          }`}
+                        >
+                          <svg
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              (item.isServices && isServicesOpen) ||
+                              (!item.isServices && isResourcesOpen)
+                                ? "rotate-180"
+                                : ""
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+                      </div>
 
                       {/* Active underline */}
                       {isActive(item.href) && (
@@ -373,38 +384,50 @@ const Navbar = () => {
                 <div key={item.name}>
                   {item.hasDropdown ? (
                     <div>
-                      <button
-                        onClick={() =>
-                          item.isServices
-                            ? setIsServicesOpen(!isServicesOpen)
-                            : setIsResourcesOpen(!isResourcesOpen)
-                        }
-                        className={`w-full text-left px-3 py-2 text-base font-medium transition-colors duration-200 flex items-center justify-between ${
-                          isActive(item.href)
-                            ? "text-purple-600 bg-purple-50"
-                            : "text-gray-700 hover:text-purple-600 hover:bg-gray-50"
-                        }`}
-                      >
-                        <span>{item.name}</span>
-                        <svg
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            (item.isServices && isServicesOpen) ||
-                            (!item.isServices && isResourcesOpen)
-                              ? "rotate-180"
-                              : ""
+                      <div className="flex items-center">
+                        <Link
+                          href={item.href}
+                          className={`flex-1 px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                            isActive(item.href)
+                              ? "text-purple-600 bg-purple-50"
+                              : "text-gray-700 hover:text-purple-600 hover:bg-gray-50"
                           }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+                          onClick={() => setIsMenuOpen(false)}
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </button>
+                          {item.name}
+                        </Link>
+                        <button
+                          onClick={() =>
+                            item.isServices
+                              ? setIsServicesOpen(!isServicesOpen)
+                              : setIsResourcesOpen(!isResourcesOpen)
+                          }
+                          className={`px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                            isActive(item.href)
+                              ? "text-purple-600 bg-purple-50"
+                              : "text-gray-700 hover:text-purple-600 hover:bg-gray-50"
+                          }`}
+                        >
+                          <svg
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              (item.isServices && isServicesOpen) ||
+                              (!item.isServices && isResourcesOpen)
+                                ? "rotate-180"
+                                : ""
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+                      </div>
 
                       {/* Mobile Services Dropdown */}
                       {item.isServices && isServicesOpen && (
