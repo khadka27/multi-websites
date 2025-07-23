@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 import Navbar from "../components/Navbar";
 import SocialSidebar from "../components/SocialSidebar";
 import Footer from "../components/Footer";
@@ -26,13 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen font-sans`}
+        style={{ margin: 0, padding: 0 }}
       >
         <Navbar />
         <SocialSidebar />
-        {children}
+        <main className="relative">{children}</main>
         <Footer />
       </body>
     </html>

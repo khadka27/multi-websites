@@ -15,7 +15,7 @@ import PricingCTA from "../components/PricingCTA";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Stats />
       <WhyChoose />
@@ -30,6 +30,6 @@ export default function Home() {
       <BlogCTA />
       <Features />
       <PricingCTA />
-    </main>
+    </>
   );
 }

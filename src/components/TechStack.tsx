@@ -164,9 +164,9 @@ const TechStack = () => {
         </div>
 
         {/* Scrolling Logo Rows */}
-        <div className="space-y-12">
+        <div className="space-y-20 ">
           {/* Row 1 - Scroll Right */}
-          <div className="relative">
+          <div className="relative mb-6">
             <div className="flex animate-scroll-right-smooth">
               {duplicateRow1.map((tech, index) => (
                 <div key={index} className="flex-shrink-0 mx-4 lg:mx-6">
@@ -184,7 +184,10 @@ const TechStack = () => {
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
                               if (e.currentTarget.nextElementSibling) {
-                                (e.currentTarget.nextElementSibling as HTMLElement).style.display = "block";
+                                (
+                                  e.currentTarget
+                                    .nextElementSibling as HTMLElement
+                                ).style.display = "block";
                               }
                             }}
                           />
@@ -211,7 +214,7 @@ const TechStack = () => {
           </div>
 
           {/* Row 2 - Scroll Left */}
-          <div className="relative">
+            <div className="relative mb-6">
             <div className="flex animate-scroll-left-smooth">
               {duplicateRow2.map((tech, index) => (
                 <div key={index} className="flex-shrink-0 mx-4 lg:mx-6">
@@ -229,7 +232,10 @@ const TechStack = () => {
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
                               if (e.currentTarget.nextElementSibling) {
-                                (e.currentTarget.nextElementSibling as HTMLElement).style.display = "block";
+                                (
+                                  e.currentTarget
+                                    .nextElementSibling as HTMLElement
+                                ).style.display = "block";
                               }
                             }}
                           />
@@ -274,7 +280,10 @@ const TechStack = () => {
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
                               if (e.currentTarget.nextElementSibling) {
-                                (e.currentTarget.nextElementSibling as HTMLElement).style.display = "block";
+                                (
+                                  e.currentTarget
+                                    .nextElementSibling as HTMLElement
+                                ).style.display = "block";
                               }
                             }}
                           />
