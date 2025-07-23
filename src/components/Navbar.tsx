@@ -160,18 +160,47 @@ const Navbar = () => {
         href: "/services/brochure-designs",
       },
     ],
-    "Marketing Services": [
+    "Language Services": [
       {
-        name: "Digital Marketing",
-        icon: "📈",
-        href: "/services/digital-marketing",
+        name: "JavaScript Development",
+        icon: "🟨",
+        href: "/services/javascript-development",
       },
       {
-        name: "Search Engine Optimization (SEO)",
-        icon: "🔍",
-        href: "/services/seo",
+        name: "TypeScript Development",
+        icon: "�",
+        href: "/services/typescript-development",
       },
-      { name: "Content Writer", icon: "✍️", href: "/services/content-writing" },
+      {
+        name: "Dart Programming",
+        icon: "🎯",
+        href: "/services/dart-development",
+      },
+      {
+        name: "Next.js Development",
+        icon: "⚡",
+        href: "/services/nextjs-development",
+      },
+      {
+        name: "Go Development",
+        icon: "🐹",
+        href: "/services/go-development",
+      },
+      {
+        name: "Python Development",
+        icon: "🐍",
+        href: "/services/python-development",
+      },
+      {
+        name: "Java Development",
+        icon: "☕",
+        href: "/services/java-development",
+      },
+      {
+        name: "Laravel Development",
+        icon: "🔴",
+        href: "/services/laravel-development",
+      },
     ],
   };
 
@@ -188,7 +217,13 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 relative">
-                <Image src="/logo/websiteprogrammingdevelopmentlogo.png" alt="wp development logo" width={32} height={32} priority />
+                <Image
+                  src="/logo/websiteprogrammingdevelopmentlogo.png"
+                  alt="wp development logo"
+                  width={32}
+                  height={32}
+                  priority
+                />
               </div>
               <span className="text-xl font-bold text-gray-900">
                 wp development

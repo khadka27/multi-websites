@@ -5,18 +5,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = {
-    services: [
-      { name: "Web Development", href: "/services/web-development" },
-      {
-        name: "Mobile App Development",
-        href: "/services/mobile-app-development",
-      },
-      { name: "MVP Development", href: "/services/mvp-development" },
-      {
-        name: "AI & Machine Learning",
-        href: "/services/artificial-intelligence",
-      },
-      { name: "UI/UX Design", href: "/services/ui-ux-designs" },
+    technologies: [
+      { name: "React Development", href: "/services/react-development" },
+      { name: "Next.js Development", href: "/services/nextjs-development" },
+      { name: "Node.js Development", href: "/services/nodejs-development" },
+      { name: "Python Development", href: "/services/python-development" },
+      { name: "Java Development", href: "/services/java-development" },
+    ],
+    mobile: [
+      { name: "Flutter Development", href: "/services/flutter-development" },
+      { name: "React Native", href: "/services/react-native-development" },
+      { name: "Native iOS", href: "/services/ios-development" },
+      { name: "Native Android", href: "/services/android-development" },
+      { name: "Dart Programming", href: "/services/dart-development" },
     ],
     company: [
       { name: "About Us", href: "/company" },
@@ -120,13 +121,32 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Services */}
+            {/* Technologies */}
             <div>
               <h3 className="text-sm font-semibold text-gray-900 mb-4">
-                Services
+                Technologies
               </h3>
               <ul className="space-y-3">
-                {footerSections.services.map((item) => (
+                {footerSections.technologies.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Mobile Development */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 mb-4">
+                Mobile Development
+              </h3>
+              <ul className="space-y-3">
+                {footerSections.mobile.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
