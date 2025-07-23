@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MVP Development",
-  description: "Professional development services for your next MVP",
+  title: "wp development",
+  description: "Professional development services for your next project",
 };
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Main Heading */}
         <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-gray-900 mb-4 leading-tight tracking-tight">
-          MVP Development
+          wp development
         </h1>
 
         {/* Colorful Subheading */}

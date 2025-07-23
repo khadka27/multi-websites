@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { name: "Solution", href: "/solution" },
+    { name: "Home", href: "/" },
     { name: "Pricing", href: "/pricing" },
     {
       name: "Services",
@@ -186,11 +187,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">{`{/}`}</span>
+              <div className="w-8 h-8 relative">
+                <Image src="/logo/websiteprogrammingdevelopmentlogo.png" alt="wp development logo" width={32} height={32} priority />
               </div>
               <span className="text-xl font-bold text-gray-900">
-                MVP Development
+                wp development
               </span>
             </Link>
           </div>
