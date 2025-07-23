@@ -25,10 +25,37 @@ const Navbar = () => {
       href: "/resources",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Blog", href: "/resources/blog" },
-        { name: "Documentation", href: "/resources/docs" },
+        // Tutorials submenu
+        {
+          name: "HTML & CSS",
+          href: "/resources/tutorials/html-css",
+          isSubmenu: true,
+          category: "Tutorials",
+        },
+        {
+          name: "JavaScript & TypeScript",
+          href: "/resources/tutorials/javascript-typescript",
+          isSubmenu: true,
+          category: "Tutorials",
+        },
+        {
+          name: "Frameworks & Libraries",
+          href: "/resources/tutorials/frameworks-libraries",
+          isSubmenu: true,
+          category: "Tutorials",
+        },
+        {
+          name: "DevOps & Deployment",
+          href: "/resources/tutorials/devops-deployment",
+          isSubmenu: true,
+          category: "Tutorials",
+        },
+        // Case Studies
         { name: "Case Studies", href: "/resources/case-studies" },
-        { name: "Guides", href: "/resources/guides" },
+        // Other Resources
+        { name: "Cheat Sheets", href: "/resources/cheat-sheets" },
+        { name: "Tooling & Extensions", href: "/resources/tooling-extensions" },
+        { name: "Recommended Reading", href: "/resources/recommended-reading" },
       ],
     },
     { name: "Blogs", href: "/blogs" },
@@ -332,16 +359,42 @@ const Navbar = () => {
                       {!item.isServices &&
                         isResourcesOpen &&
                         item.dropdownItems && (
-                          <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-100 py-1">
-                            {item.dropdownItems.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-150"
-                              >
-                                {dropdownItem.name}
-                              </Link>
-                            ))}
+                          <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-md shadow-lg border border-gray-100 py-2">
+                            {/* Tutorials Section */}
+                            <div className="px-4 py-2">
+                              <h4 className="text-xs font-semibold text-purple-600 mb-2 uppercase tracking-wide">
+                                Tutorials
+                              </h4>
+                              {item.dropdownItems
+                                .filter(
+                                  (dropdownItem) => dropdownItem.isSubmenu
+                                )
+                                .map((dropdownItem) => (
+                                  <Link
+                                    key={dropdownItem.name}
+                                    href={dropdownItem.href}
+                                    className="block px-3 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-150 rounded-md"
+                                  >
+                                    {dropdownItem.name}
+                                  </Link>
+                                ))}
+                            </div>
+
+                            {/* Divider */}
+                            <div className="border-t border-gray-100 my-2"></div>
+
+                            {/* Other Resources */}
+                            {item.dropdownItems
+                              .filter((dropdownItem) => !dropdownItem.isSubmenu)
+                              .map((dropdownItem) => (
+                                <Link
+                                  key={dropdownItem.name}
+                                  href={dropdownItem.href}
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors duration-150"
+                                >
+                                  {dropdownItem.name}
+                                </Link>
+                              ))}
                           </div>
                         )}
                     </div>
@@ -496,16 +549,40 @@ const Navbar = () => {
                         isResourcesOpen &&
                         item.dropdownItems && (
                           <div className="pl-6 space-y-1">
-                            {item.dropdownItems.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
-                                className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition-colors duration-150"
-                                onClick={() => setIsMenuOpen(false)}
-                              >
-                                {dropdownItem.name}
-                              </Link>
-                            ))}
+                            {/* Tutorials Section */}
+                            <div className="py-2">
+                              <h4 className="text-xs font-semibold text-purple-600 mb-2 uppercase tracking-wide">
+                                Tutorials
+                              </h4>
+                              {item.dropdownItems
+                                .filter(
+                                  (dropdownItem) => dropdownItem.isSubmenu
+                                )
+                                .map((dropdownItem) => (
+                                  <Link
+                                    key={dropdownItem.name}
+                                    href={dropdownItem.href}
+                                    className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition-colors duration-150"
+                                    onClick={() => setIsMenuOpen(false)}
+                                  >
+                                    {dropdownItem.name}
+                                  </Link>
+                                ))}
+                            </div>
+
+                            {/* Other Resources */}
+                            {item.dropdownItems
+                              .filter((dropdownItem) => !dropdownItem.isSubmenu)
+                              .map((dropdownItem) => (
+                                <Link
+                                  key={dropdownItem.name}
+                                  href={dropdownItem.href}
+                                  className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 transition-colors duration-150"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  {dropdownItem.name}
+                                </Link>
+                              ))}
                           </div>
                         )}
                     </div>
