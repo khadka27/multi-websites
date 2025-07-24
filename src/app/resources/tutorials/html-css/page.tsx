@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "HTML & CSS Tutorials - wp development",
@@ -23,7 +24,8 @@ export default function HTMLCSSTutorialsPage() {
       level: "Beginner",
       duration: "30 min",
       topics: ["Semantic HTML", "Forms", "Media Elements", "Accessibility"],
-      icon: "📄",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      link: "https://www.w3schools.com/html/",
     },
     {
       title: "CSS Grid Mastery",
@@ -36,7 +38,8 @@ export default function HTMLCSSTutorialsPage() {
         "Responsive Grids",
         "Grid Areas",
       ],
-      icon: "📐",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      link: "https://css-tricks.com/snippets/css/complete-guide-grid/",
     },
     {
       title: "Flexbox Complete Guide",
@@ -49,7 +52,8 @@ export default function HTMLCSSTutorialsPage() {
         "Alignment",
         "Responsive Design",
       ],
-      icon: "🔧",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      link: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
     },
     {
       title: "CSS Animations & Transitions",
@@ -57,7 +61,8 @@ export default function HTMLCSSTutorialsPage() {
       level: "Intermediate",
       duration: "40 min",
       topics: ["Transitions", "Keyframes", "Transform", "Performance"],
-      icon: "✨",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations",
     },
     {
       title: "Responsive Web Design",
@@ -65,7 +70,8 @@ export default function HTMLCSSTutorialsPage() {
       level: "Intermediate",
       duration: "50 min",
       topics: ["Media Queries", "Mobile First", "Breakpoints", "Viewport"],
-      icon: "📱",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      link: "https://www.w3schools.com/css/css_rwd_intro.asp",
     },
     {
       title: "CSS Variables & Custom Properties",
@@ -78,7 +84,8 @@ export default function HTMLCSSTutorialsPage() {
         "Calculations",
         "Inheritance",
       ],
-      icon: "🎨",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties",
     },
   ];
 
@@ -182,7 +189,21 @@ svg {
       <section className="bg-gradient-to-r from-blue-50 to-purple-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="text-6xl mb-6">📄</div>
+            <div className="flex justify-center mb-6">
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5 Logo"
+                width={80}
+                height={80}
+                className="mr-4"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3 Logo"
+                width={80}
+                height={80}
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               HTML & CSS Tutorials
             </h1>
@@ -226,7 +247,12 @@ svg {
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:border-purple-200"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{tutorial.icon}</span>
+                  <Image
+                    src={tutorial.icon}
+                    alt={tutorial.title}
+                    width={32}
+                    height={32}
+                  />
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${getLevelColor(
                       tutorial.level
@@ -252,9 +278,15 @@ svg {
                     </span>
                   ))}
                 </div>
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200">
-                  Start Tutorial
-                </button>
+                <a
+                  href={tutorial.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
+                >
+                  Start Learning
+                  <span className="text-sm">↗</span>
+                </a>
               </div>
             ))}
           </div>

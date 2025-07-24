@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Frameworks & Libraries Tutorials - wp development",
@@ -23,9 +24,10 @@ export default function FrameworksLibrariesTutorialsPage() {
       level: "Intermediate",
       duration: "90 min",
       topics: ["Hooks", "Context", "Suspense", "Concurrent Features"],
-      icon: "⚛️",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       framework: "React",
       popularity: "Most Popular",
+      link: "https://react.dev/",
     },
     {
       title: "Next.js Full Stack Development",
@@ -33,9 +35,10 @@ export default function FrameworksLibrariesTutorialsPage() {
       level: "Advanced",
       duration: "120 min",
       topics: ["App Router", "Server Components", "API Routes", "Deployment"],
-      icon: "▲",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       framework: "Next.js",
       popularity: "Rising",
+      link: "https://nextjs.org/learn",
     },
     {
       title: "Angular Fundamentals",
@@ -43,9 +46,10 @@ export default function FrameworksLibrariesTutorialsPage() {
       level: "Intermediate",
       duration: "100 min",
       topics: ["Components", "Services", "Routing", "RxJS"],
-      icon: "🅰️",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
       framework: "Angular",
       popularity: "Enterprise",
+      link: "https://angular.io/tutorial",
     },
     {
       title: "Vue.js Progressive Framework",
@@ -53,9 +57,10 @@ export default function FrameworksLibrariesTutorialsPage() {
       level: "Beginner",
       duration: "70 min",
       topics: ["Composition API", "Reactivity", "Components", "Router"],
-      icon: "💚",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
       framework: "Vue.js",
       popularity: "Growing",
+      link: "https://vuejs.org/guide/",
     },
     {
       title: "State Management with Redux",
@@ -63,9 +68,10 @@ export default function FrameworksLibrariesTutorialsPage() {
       level: "Intermediate",
       duration: "60 min",
       topics: ["Actions", "Reducers", "Store", "Middleware"],
-      icon: "🔄",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
       framework: "Redux",
       popularity: "Standard",
+      link: "https://redux.js.org/introduction/getting-started",
     },
     {
       title: "Node.js Backend Development",
@@ -73,9 +79,10 @@ export default function FrameworksLibrariesTutorialsPage() {
       level: "Intermediate",
       duration: "80 min",
       topics: ["Express.js", "Middleware", "REST APIs", "Database"],
-      icon: "🟢",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       framework: "Node.js",
       popularity: "Backend",
+      link: "https://nodejs.org/en/docs/guides/",
     },
   ];
 
@@ -285,11 +292,31 @@ export async function POST(request: NextRequest) {
       <section className="bg-gradient-to-r from-purple-50 to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex justify-center gap-4 text-6xl mb-6">
-              <span>⚛️</span>
-              <span>▲</span>
-              <span>🅰️</span>
-              <span>💚</span>
+            <div className="flex justify-center gap-4 mb-6">
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React Logo"
+                width={60}
+                height={60}
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js Logo"
+                width={60}
+                height={60}
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                alt="Angular Logo"
+                width={60}
+                height={60}
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                alt="Vue.js Logo"
+                width={60}
+                height={60}
+              />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Frameworks & Libraries
@@ -334,7 +361,13 @@ export async function POST(request: NextRequest) {
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:border-purple-200"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{framework.icon}</span>
+                  <Image
+                    src={framework.icon}
+                    alt={`${framework.title} logo`}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
                   <div className="flex gap-2">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getPopularityColor(
@@ -371,9 +404,14 @@ export async function POST(request: NextRequest) {
                     </span>
                   ))}
                 </div>
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200">
-                  Start Tutorial
-                </button>
+                <Link
+                  href={framework.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200 text-center"
+                >
+                  Start Learning
+                </Link>
               </div>
             ))}
           </div>

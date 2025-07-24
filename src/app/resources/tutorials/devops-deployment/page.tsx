@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "DevOps & Deployment Tutorials - wp development",
@@ -23,8 +24,9 @@ export default function DevOpsDeploymentTutorialsPage() {
       level: "Beginner",
       duration: "60 min",
       topics: ["Containers", "Images", "Dockerfile", "Docker Compose"],
-      icon: "🐳",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
       category: "Containerization",
+      link: "https://docs.docker.com/get-started/",
     },
     {
       title: "CI/CD with GitHub Actions",
@@ -32,8 +34,9 @@ export default function DevOpsDeploymentTutorialsPage() {
       level: "Intermediate",
       duration: "75 min",
       topics: ["Workflows", "Actions", "Secrets", "Deployment"],
-      icon: "🔄",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
       category: "Automation",
+      link: "https://docs.github.com/en/actions/learn-github-actions",
     },
     {
       title: "AWS Cloud Deployment",
@@ -41,8 +44,9 @@ export default function DevOpsDeploymentTutorialsPage() {
       level: "Advanced",
       duration: "90 min",
       topics: ["EC2", "S3", "CloudFront", "RDS"],
-      icon: "☁️",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       category: "Cloud",
+      link: "https://aws.amazon.com/getting-started/",
     },
     {
       title: "Kubernetes Basics",
@@ -50,8 +54,9 @@ export default function DevOpsDeploymentTutorialsPage() {
       level: "Advanced",
       duration: "100 min",
       topics: ["Pods", "Services", "Deployments", "Ingress"],
-      icon: "⚓",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg",
       category: "Orchestration",
+      link: "https://kubernetes.io/docs/tutorials/",
     },
     {
       title: "Monitoring & Logging",
@@ -59,8 +64,9 @@ export default function DevOpsDeploymentTutorialsPage() {
       level: "Intermediate",
       duration: "50 min",
       topics: ["Metrics", "Logs", "Alerts", "Dashboards"],
-      icon: "📊",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg",
       category: "Monitoring",
+      link: "https://grafana.com/tutorials/",
     },
     {
       title: "Security Best Practices",
@@ -68,8 +74,9 @@ export default function DevOpsDeploymentTutorialsPage() {
       level: "Advanced",
       duration: "65 min",
       topics: ["Secrets", "Scanning", "Compliance", "Access Control"],
-      icon: "🔒",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg",
       category: "Security",
+      link: "https://owasp.org/www-project-devsecops-guideline/",
     },
   ];
 
@@ -77,7 +84,7 @@ export default function DevOpsDeploymentTutorialsPage() {
     {
       name: "Vercel",
       description: "Perfect for frontend applications and JAMstack",
-      icon: "▲",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
       features: [
         "Automatic deployments",
         "Edge functions",
@@ -86,30 +93,34 @@ export default function DevOpsDeploymentTutorialsPage() {
       ],
       bestFor: "Next.js, React, Static sites",
       pricing: "Free tier available",
+      link: "https://vercel.com/docs",
     },
     {
       name: "Netlify",
       description: "Comprehensive platform for modern web projects",
-      icon: "🌐",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
       features: ["Continuous deployment", "Forms", "Functions", "CDN"],
       bestFor: "Static sites, JAMstack, Serverless",
       pricing: "Free tier available",
+      link: "https://docs.netlify.com/",
     },
     {
       name: "AWS",
       description: "Enterprise-grade cloud infrastructure",
-      icon: "☁️",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       features: ["Scalable", "Global", "Comprehensive", "Enterprise"],
       bestFor: "Large applications, Enterprise",
       pricing: "Pay as you use",
+      link: "https://aws.amazon.com/documentation/",
     },
     {
       name: "Digital Ocean",
       description: "Developer-friendly cloud platform",
-      icon: "🌊",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg",
       features: ["Simple pricing", "App Platform", "Databases", "Monitoring"],
       bestFor: "Full-stack applications, APIs",
       pricing: "Predictable pricing",
+      link: "https://docs.digitalocean.com/",
     },
   ];
 
@@ -293,11 +304,35 @@ jobs:
       <section className="bg-gradient-to-r from-blue-50 to-purple-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex justify-center gap-4 text-6xl mb-6">
-              <span>🐳</span>
-              <span>🔄</span>
-              <span>☁️</span>
-              <span>⚓</span>
+            <div className="flex justify-center gap-6 mb-8">
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                alt="Docker"
+                width={64}
+                height={64}
+                className="object-contain"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
+                alt="Kubernetes"
+                width={64}
+                height={64}
+                className="object-contain"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                alt="AWS"
+                width={64}
+                height={64}
+                className="object-contain"
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg"
+                alt="GitHub Actions"
+                width={64}
+                height={64}
+                className="object-contain"
+              />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               DevOps & Deployment
@@ -342,7 +377,13 @@ jobs:
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:border-purple-200"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{tutorial.icon}</span>
+                  <Image
+                    src={tutorial.icon}
+                    alt={`${tutorial.title} logo`}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
                   <div className="flex gap-2">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(
@@ -377,9 +418,14 @@ jobs:
                     </span>
                   ))}
                 </div>
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200">
-                  Start Tutorial
-                </button>
+                <Link
+                  href={tutorial.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200 text-center"
+                >
+                  Start Learning
+                </Link>
               </div>
             ))}
           </div>
@@ -404,7 +450,13 @@ jobs:
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{platform.icon}</span>
+                  <Image
+                    src={platform.icon}
+                    alt={`${platform.name} logo`}
+                    width={48}
+                    height={48}
+                    className="object-contain mr-4"
+                  />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">
                       {platform.name}
@@ -427,7 +479,7 @@ jobs:
                     ))}
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                   <div>
                     <span className="font-medium text-gray-900">Best for:</span>
                     <p className="text-gray-600">{platform.bestFor}</p>
@@ -437,6 +489,14 @@ jobs:
                     <p className="text-gray-600">{platform.pricing}</p>
                   </div>
                 </div>
+                <Link
+                  href={platform.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200 text-center"
+                >
+                  View Documentation
+                </Link>
               </div>
             ))}
           </div>

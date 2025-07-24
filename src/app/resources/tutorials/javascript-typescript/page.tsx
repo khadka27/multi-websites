@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "JavaScript & TypeScript Tutorials - wp development",
@@ -23,8 +24,9 @@ export default function JavaScriptTypeScriptTutorialsPage() {
       level: "Intermediate",
       duration: "60 min",
       topics: ["Arrow Functions", "Destructuring", "Modules", "Classes"],
-      icon: "🟨",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       language: "JavaScript",
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
     },
     {
       title: "Async JavaScript Mastery",
@@ -32,8 +34,9 @@ export default function JavaScriptTypeScriptTutorialsPage() {
       level: "Intermediate",
       duration: "45 min",
       topics: ["Promises", "Async/Await", "Error Handling", "Fetch API"],
-      icon: "⚡",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       language: "JavaScript",
+      link: "https://javascript.info/async",
     },
     {
       title: "TypeScript Fundamentals",
@@ -41,8 +44,9 @@ export default function JavaScriptTypeScriptTutorialsPage() {
       level: "Beginner",
       duration: "50 min",
       topics: ["Types", "Interfaces", "Generics", "Compilation"],
-      icon: "🔷",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       language: "TypeScript",
+      link: "https://www.typescriptlang.org/docs/",
     },
     {
       title: "Advanced TypeScript",
@@ -55,8 +59,9 @@ export default function JavaScriptTypeScriptTutorialsPage() {
         "Conditional Types",
         "Decorators",
       ],
-      icon: "💎",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       language: "TypeScript",
+      link: "https://www.typescriptlang.org/docs/handbook/advanced-types.html",
     },
     {
       title: "DOM Manipulation",
@@ -64,8 +69,9 @@ export default function JavaScriptTypeScriptTutorialsPage() {
       level: "Beginner",
       duration: "40 min",
       topics: ["Selectors", "Events", "DOM API", "Dynamic Content"],
-      icon: "🌐",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       language: "JavaScript",
+      link: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
     },
     {
       title: "JavaScript Testing",
@@ -73,8 +79,9 @@ export default function JavaScriptTypeScriptTutorialsPage() {
       level: "Intermediate",
       duration: "55 min",
       topics: ["Jest", "Unit Tests", "Mocking", "TDD"],
-      icon: "🧪",
+      icon: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jest.svg",
       language: "JavaScript",
+      link: "https://jestjs.io/docs/getting-started",
     },
   ];
 
@@ -216,9 +223,19 @@ async function displayUser(userId) {
       <section className="bg-gradient-to-r from-yellow-50 to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex justify-center gap-4 text-6xl mb-6">
-              <span>🟨</span>
-              <span>🔷</span>
+            <div className="flex justify-center gap-4 mb-6">
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                width={80}
+                height={80}
+              />
+              <Image
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript Logo"
+                width={80}
+                height={80}
+              />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               JavaScript & TypeScript
@@ -263,7 +280,12 @@ async function displayUser(userId) {
                 className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:border-purple-200"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{tutorial.icon}</span>
+                  <Image
+                    src={tutorial.icon}
+                    alt={tutorial.title}
+                    width={32}
+                    height={32}
+                  />
                   <div className="flex gap-2">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getLanguageColor(
@@ -298,9 +320,15 @@ async function displayUser(userId) {
                     </span>
                   ))}
                 </div>
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200">
-                  Start Tutorial
-                </button>
+                <a
+                  href={tutorial.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
+                >
+                  Start Learning
+                  <span className="text-sm">↗</span>
+                </a>
               </div>
             ))}
           </div>
