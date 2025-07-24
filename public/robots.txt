@@ -1,0 +1,16 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+
+# Host
+Host: https://www.websiteprogrammingdevelopment.com
+
+# Sitemaps
+Sitemap: https://www.websiteprogrammingdevelopment.com/sitemap.xml
+Sitemap: https://wp-development.com/sitemap.xml

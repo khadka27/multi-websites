@@ -250,10 +250,12 @@ export default function WebDevelopmentPage() {
             {technologies.map((tech, index) => (
               <div key={index} className="group text-center">
                 <div className="bg-white rounded-2xl p-6 shadow-lg border border-stone-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                  <img
+                  <Image
                     src={tech.logo}
                     alt={tech.name}
-                    className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+                    width={48}
+                    height={48}
+                    className="mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
                   />
                   <h3 className="font-medium text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
                     {tech.name}

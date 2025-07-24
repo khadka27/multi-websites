@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const TechStack = () => {
   // Real tech stack with logos - using a mix from different categories
   const techLogos = [
@@ -177,19 +179,12 @@ const TechStack = () => {
                           <div
                             className={`absolute inset-0 bg-gradient-to-br ${tech.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
                           ></div>
-                          <img
+                          <Image
                             src={tech.logo}
                             alt={tech.name}
-                            className="relative w-12 h-12 object-contain group-hover:scale-125 transition-all duration-500 ease-out filter group-hover:drop-shadow-lg"
-                            onError={(e) => {
-                              e.currentTarget.style.display = "none";
-                              if (e.currentTarget.nextElementSibling) {
-                                (
-                                  e.currentTarget
-                                    .nextElementSibling as HTMLElement
-                                ).style.display = "block";
-                              }
-                            }}
+                            width={48}
+                            height={48}
+                            className="relative object-contain group-hover:scale-125 transition-all duration-500 ease-out filter group-hover:drop-shadow-lg"
                           />
                           <div className="hidden text-2xl font-bold text-gray-400">
                             {tech.name.charAt(0)}
@@ -214,7 +209,7 @@ const TechStack = () => {
           </div>
 
           {/* Row 2 - Scroll Left */}
-            <div className="relative mb-6">
+          <div className="relative mb-6">
             <div className="flex animate-scroll-left-smooth">
               {duplicateRow2.map((tech, index) => (
                 <div key={index} className="flex-shrink-0 mx-4 lg:mx-6">
@@ -225,19 +220,12 @@ const TechStack = () => {
                           <div
                             className={`absolute inset-0 bg-gradient-to-br ${tech.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
                           ></div>
-                          <img
+                          <Image
                             src={tech.logo}
                             alt={tech.name}
-                            className="relative w-12 h-12 object-contain group-hover:scale-125 transition-all duration-500 ease-out filter group-hover:drop-shadow-lg"
-                            onError={(e) => {
-                              e.currentTarget.style.display = "none";
-                              if (e.currentTarget.nextElementSibling) {
-                                (
-                                  e.currentTarget
-                                    .nextElementSibling as HTMLElement
-                                ).style.display = "block";
-                              }
-                            }}
+                            width={48}
+                            height={48}
+                            className="relative object-contain group-hover:scale-125 transition-all duration-500 ease-out filter group-hover:drop-shadow-lg"
                           />
                           <div className="hidden text-2xl font-bold text-gray-400">
                             {tech.name.charAt(0)}
@@ -273,19 +261,12 @@ const TechStack = () => {
                           <div
                             className={`absolute inset-0 bg-gradient-to-br ${tech.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
                           ></div>
-                          <img
+                          <Image
                             src={tech.logo}
                             alt={tech.name}
-                            className="relative w-12 h-12 object-contain group-hover:scale-125 transition-all duration-500 ease-out filter group-hover:drop-shadow-lg"
-                            onError={(e) => {
-                              e.currentTarget.style.display = "none";
-                              if (e.currentTarget.nextElementSibling) {
-                                (
-                                  e.currentTarget
-                                    .nextElementSibling as HTMLElement
-                                ).style.display = "block";
-                              }
-                            }}
+                            width={48}
+                            height={48}
+                            className="relative object-contain group-hover:scale-125 transition-all duration-500 ease-out filter group-hover:drop-shadow-lg"
                           />
                           <div className="hidden text-2xl font-bold text-gray-400">
                             {tech.name.charAt(0)}

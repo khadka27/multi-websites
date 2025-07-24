@@ -1,16 +1,19 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import Image from 'next/image';
+import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development Services | iOS & Android Apps | MVP Development',
-  description: 'Professional mobile app development for iOS and Android. Native, cross-platform, and hybrid app solutions with React Native, Flutter, and Swift.',
-  keywords: 'mobile app development, iOS development, Android development, React Native, Flutter, mobile apps, cross-platform',
+  title:
+    "Mobile App Development Services | iOS & Android Apps | MVP Development",
+  description:
+    "Professional mobile app development for iOS and Android. Native, cross-platform, and hybrid app solutions with React Native, Flutter, and Swift.",
+  keywords:
+    "mobile app development, iOS development, Android development, React Native, Flutter, mobile apps, cross-platform",
   openGraph: {
-    title: 'Mobile App Development Services | MVP Development',
-    description: 'Professional mobile app development for iOS and Android platforms.',
-    type: 'website',
-  }
+    title: "Mobile App Development Services | MVP Development",
+    description:
+      "Professional mobile app development for iOS and Android platforms.",
+    type: "website",
+  },
 };
 
 export default function MobileAppDevelopmentPage() {
@@ -19,92 +22,171 @@ export default function MobileAppDevelopmentPage() {
       name: "iOS Development",
       icon: "🍎",
       description: "Native iOS apps with Swift and SwiftUI",
-      features: ["Swift Programming", "App Store Optimization", "iOS Design Guidelines", "TestFlight Beta Testing"],
-      color: "from-gray-800 to-gray-600"
+      features: [
+        "Swift Programming",
+        "App Store Optimization",
+        "iOS Design Guidelines",
+        "TestFlight Beta Testing",
+      ],
+      color: "from-gray-800 to-gray-600",
     },
     {
-      name: "Android Development", 
+      name: "Android Development",
       icon: "🤖",
       description: "Native Android apps with Kotlin and Java",
-      features: ["Kotlin/Java Development", "Google Play Store", "Material Design", "Android Testing Framework"],
-      color: "from-green-600 to-green-400"
+      features: [
+        "Kotlin/Java Development",
+        "Google Play Store",
+        "Material Design",
+        "Android Testing Framework",
+      ],
+      color: "from-green-600 to-green-400",
     },
     {
       name: "Cross-Platform",
-      icon: "🔄", 
+      icon: "🔄",
       description: "React Native and Flutter solutions",
-      features: ["Single Codebase", "Native Performance", "Faster Development", "Cost-Effective"],
-      color: "from-blue-600 to-purple-600"
-    }
+      features: [
+        "Single Codebase",
+        "Native Performance",
+        "Faster Development",
+        "Cost-Effective",
+      ],
+      color: "from-blue-600 to-purple-600",
+    },
   ];
 
   const appTypes = [
     {
       category: "Business Apps",
       icon: "💼",
-      examples: ["CRM Systems", "Project Management", "Team Collaboration", "Productivity Tools"],
-      color: "bg-blue-50 border-blue-200"
+      examples: [
+        "CRM Systems",
+        "Project Management",
+        "Team Collaboration",
+        "Productivity Tools",
+      ],
+      color: "bg-blue-50 border-blue-200",
     },
     {
       category: "E-commerce Apps",
-      icon: "🛒", 
-      examples: ["Online Stores", "Marketplace Apps", "Payment Integration", "Inventory Management"],
-      color: "bg-green-50 border-green-200"
+      icon: "🛒",
+      examples: [
+        "Online Stores",
+        "Marketplace Apps",
+        "Payment Integration",
+        "Inventory Management",
+      ],
+      color: "bg-green-50 border-green-200",
     },
     {
       category: "Social Apps",
       icon: "💬",
-      examples: ["Chat Applications", "Social Networks", "Content Sharing", "Community Platforms"],
-      color: "bg-purple-50 border-purple-200"
+      examples: [
+        "Chat Applications",
+        "Social Networks",
+        "Content Sharing",
+        "Community Platforms",
+      ],
+      color: "bg-purple-50 border-purple-200",
     },
     {
       category: "Entertainment Apps",
       icon: "🎮",
-      examples: ["Gaming Apps", "Media Streaming", "AR/VR Experiences", "Interactive Content"],
-      color: "bg-orange-50 border-orange-200"
-    }
+      examples: [
+        "Gaming Apps",
+        "Media Streaming",
+        "AR/VR Experiences",
+        "Interactive Content",
+      ],
+      color: "bg-orange-50 border-orange-200",
+    },
   ];
 
   const developmentProcess = [
     {
       phase: "Discovery",
       duration: "1-2 weeks",
-      activities: ["Market Research", "User Personas", "Feature Planning", "Technical Architecture"],
-      deliverable: "Project Roadmap"
+      activities: [
+        "Market Research",
+        "User Personas",
+        "Feature Planning",
+        "Technical Architecture",
+      ],
+      deliverable: "Project Roadmap",
     },
     {
       phase: "Design",
-      duration: "2-3 weeks", 
+      duration: "2-3 weeks",
       activities: ["UI/UX Design", "Wireframes", "Prototypes", "Design System"],
-      deliverable: "Interactive Prototype"
+      deliverable: "Interactive Prototype",
     },
     {
       phase: "Development",
       duration: "8-16 weeks",
-      activities: ["Frontend Development", "Backend APIs", "Database Design", "Third-party Integrations"],
-      deliverable: "Beta Application"
+      activities: [
+        "Frontend Development",
+        "Backend APIs",
+        "Database Design",
+        "Third-party Integrations",
+      ],
+      deliverable: "Beta Application",
     },
     {
       phase: "Testing",
       duration: "2-3 weeks",
-      activities: ["Unit Testing", "Integration Testing", "Performance Testing", "User Acceptance Testing"],
-      deliverable: "Tested Application"
+      activities: [
+        "Unit Testing",
+        "Integration Testing",
+        "Performance Testing",
+        "User Acceptance Testing",
+      ],
+      deliverable: "Tested Application",
     },
     {
       phase: "Launch",
       duration: "1-2 weeks",
-      activities: ["App Store Submission", "Marketing Setup", "Analytics Implementation", "User Training"],
-      deliverable: "Live Application"
-    }
+      activities: [
+        "App Store Submission",
+        "Marketing Setup",
+        "Analytics Implementation",
+        "User Training",
+      ],
+      deliverable: "Live Application",
+    },
   ];
 
   const features = [
-    { icon: "🚀", title: "Fast Performance", description: "Optimized for speed and efficiency" },
-    { icon: "🔒", title: "Secure Architecture", description: "Enterprise-grade security implementation" },
-    { icon: "📊", title: "Analytics Integration", description: "Built-in analytics and reporting" },
-    { icon: "🔔", title: "Push Notifications", description: "Engage users with targeted messaging" },
-    { icon: "💳", title: "Payment Integration", description: "Secure payment processing solutions" },
-    { icon: "🌐", title: "Offline Capability", description: "Works seamlessly without internet" }
+    {
+      icon: "🚀",
+      title: "Fast Performance",
+      description: "Optimized for speed and efficiency",
+    },
+    {
+      icon: "🔒",
+      title: "Secure Architecture",
+      description: "Enterprise-grade security implementation",
+    },
+    {
+      icon: "📊",
+      title: "Analytics Integration",
+      description: "Built-in analytics and reporting",
+    },
+    {
+      icon: "🔔",
+      title: "Push Notifications",
+      description: "Engage users with targeted messaging",
+    },
+    {
+      icon: "💳",
+      title: "Payment Integration",
+      description: "Secure payment processing solutions",
+    },
+    {
+      icon: "🌐",
+      title: "Offline Capability",
+      description: "Works seamlessly without internet",
+    },
   ];
 
   return (
@@ -120,26 +202,38 @@ export default function MobileAppDevelopmentPage() {
                 Mobile App Development
               </span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-light text-gray-900 mb-8 leading-tight">
               Build Amazing
               <span className="block bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent font-medium">
                 Mobile Experiences
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-              Transform your ideas into powerful mobile applications. We create intuitive, high-performance apps for iOS and Android that engage users and drive business growth across all platforms.
+              Transform your ideas into powerful mobile applications. We create
+              intuitive, high-performance apps for iOS and Android that engage
+              users and drive business growth across all platforms.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <Link 
+              <Link
                 href="/contact"
                 className="group inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-700 hover:to-cyan-700 text-white px-10 py-4 rounded-2xl font-medium transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 Start Your App Project
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
               <Link
@@ -169,7 +263,7 @@ export default function MobileAppDevelopmentPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative transform -rotate-12 hover:rotate-6 transition-transform duration-500">
                 <div className="w-48 h-96 bg-gradient-to-br from-indigo-600 to-cyan-600 rounded-3xl p-2 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
@@ -200,14 +294,20 @@ export default function MobileAppDevelopmentPage() {
               Choose Your Platform
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
-              We develop for all major mobile platforms with expertise in both native and cross-platform solutions.
+              We develop for all major mobile platforms with expertise in both
+              native and cross-platform solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {platforms.map((platform, index) => (
-              <div key={index} className="group relative overflow-hidden bg-white rounded-3xl border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+              <div
+                key={index}
+                className="group relative overflow-hidden bg-white rounded-3xl border border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              >
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                ></div>
                 <div className="relative p-8">
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {platform.icon}
@@ -220,8 +320,13 @@ export default function MobileAppDevelopmentPage() {
                   </p>
                   <div className="space-y-3">
                     {platform.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-3">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${platform.color} rounded-full`}></div>
+                      <div
+                        key={featureIndex}
+                        className="flex items-center space-x-3"
+                      >
+                        <div
+                          className={`w-2 h-2 bg-gradient-to-r ${platform.color} rounded-full`}
+                        ></div>
                         <span className="text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
@@ -241,13 +346,17 @@ export default function MobileAppDevelopmentPage() {
               Types of Apps We Build
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-              From business solutions to entertainment platforms, we create apps for every industry and use case.
+              From business solutions to entertainment platforms, we create apps
+              for every industry and use case.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {appTypes.map((type, index) => (
-              <div key={index} className={`group ${type.color} rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+              <div
+                key={index}
+                className={`group ${type.color} rounded-2xl p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
+              >
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {type.icon}
                 </div>
@@ -256,7 +365,10 @@ export default function MobileAppDevelopmentPage() {
                 </h3>
                 <div className="space-y-2">
                   {type.examples.map((example, exampleIndex) => (
-                    <div key={exampleIndex} className="text-sm text-gray-600 flex items-center">
+                    <div
+                      key={exampleIndex}
+                      className="text-sm text-gray-600 flex items-center"
+                    >
                       <div className="w-1 h-1 bg-gray-400 rounded-full mr-2"></div>
                       {example}
                     </div>
@@ -276,7 +388,8 @@ export default function MobileAppDevelopmentPage() {
               Essential App Features
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-              Every app we build includes these fundamental features to ensure success in the marketplace.
+              Every app we build includes these fundamental features to ensure
+              success in the marketplace.
             </p>
           </div>
 
@@ -290,9 +403,7 @@ export default function MobileAppDevelopmentPage() {
                   <h3 className="text-lg font-medium text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-600 text-sm">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -308,7 +419,8 @@ export default function MobileAppDevelopmentPage() {
               Our Development Process
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
-              A structured approach that ensures your app is delivered on time, within budget, and exceeds expectations.
+              A structured approach that ensures your app is delivered on time,
+              within budget, and exceeds expectations.
             </p>
           </div>
 
@@ -322,17 +434,26 @@ export default function MobileAppDevelopmentPage() {
                         <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white rounded-2xl text-xl font-bold mb-4">
                           {index + 1}
                         </div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-2">{phase.phase}</h3>
-                        <div className="text-sm text-indigo-600 font-medium">{phase.duration}</div>
+                        <h3 className="text-xl font-medium text-gray-900 mb-2">
+                          {phase.phase}
+                        </h3>
+                        <div className="text-sm text-indigo-600 font-medium">
+                          {phase.duration}
+                        </div>
                       </div>
                     </div>
-                    
+
                     <div className="lg:col-span-2">
                       <div className="grid grid-cols-2 gap-3">
                         {phase.activities.map((activity, activityIndex) => (
-                          <div key={activityIndex} className="flex items-center space-x-2">
+                          <div
+                            key={activityIndex}
+                            className="flex items-center space-x-2"
+                          >
                             <div className="w-2 h-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-full"></div>
-                            <span className="text-sm text-gray-700">{activity}</span>
+                            <span className="text-sm text-gray-700">
+                              {activity}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -360,7 +481,8 @@ export default function MobileAppDevelopmentPage() {
             Ready to Launch Your Mobile App?
           </h2>
           <p className="text-xl text-indigo-100 mb-8 font-light max-w-2xl mx-auto">
-            Transform your app idea into reality. Let&apos;s discuss your requirements and create a mobile experience that users will love.
+            Transform your app idea into reality. Let&apos;s discuss your
+            requirements and create a mobile experience that users will love.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -368,8 +490,18 @@ export default function MobileAppDevelopmentPage() {
               className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-indigo-600 px-8 py-4 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Free App Consultation
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </svg>
             </Link>
             <Link
@@ -383,4 +515,4 @@ export default function MobileAppDevelopmentPage() {
       </section>
     </div>
   );
-} 
+}

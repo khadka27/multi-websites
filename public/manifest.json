@@ -1,0 +1,27 @@
+{
+  "name": "WP Development - Web & Mobile App Development Services",
+  "short_name": "WP Development",
+  "description": "Professional web and mobile app development services. Expert solutions for React, Next.js, Flutter, and full-stack development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/logo/websiteprogrammingdevelopmentlogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo/websiteprogrammingdevelopmentlogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "developer"],
+  "lang": "en",
+  "dir": "ltr",
+  "orientation": "portrait-primary"
+}
