@@ -1,0 +1,238 @@
+import { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Django Development Services | Python Web Framework",
+  description: "Professional Django development services for scalable web applications. Build robust Python web solutions with Django framework and modern development practices.",
+  keywords: [
+    "Django development",
+    "Python web development",
+    "Django framework",
+    "web application development",
+    "Django REST framework",
+    "Python consulting",
+    "backend development",
+    "Django CMS",
+    "Django channels",
+    "rapid development"
+  ],
+  authors: [{ name: "wp development" }],
+  openGraph: {
+    title: "Professional Django Development Services",
+    description: "Build scalable web applications with Django. Expert Python web development using Django framework for rapid, secure development.",
+    type: "website",
+    images: [
+      {
+        url: "/logo/websiteprogrammingdevelopmentlogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Django Development Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Django Development Services",
+    description: "Build scalable web applications with Django. Expert Python web development using Django framework for rapid, secure development.",
+    images: ["/logo/websiteprogrammingdevelopmentlogo.png"],
+  },
+};
+
+const DjangoDevelopmentPage = () => {
+  const services = [
+    {
+      title: "Django Web Applications",
+      description: "Build full-featured web applications using Django's batteries-included approach for rapid development.",
+      features: ["MVC architecture", "Admin interface", "ORM integration", "Template system"]
+    },
+    {
+      title: "Django REST APIs",
+      description: "Develop robust REST APIs using Django REST Framework for modern web and mobile applications.",
+      features: ["RESTful APIs", "Authentication systems", "Serialization", "API documentation"]
+    },
+    {
+      title: "E-commerce Solutions",
+      description: "Create scalable e-commerce platforms using Django with payment integration and inventory management.",
+      features: ["Shopping cart", "Payment gateways", "Order management", "Product catalogs"]
+    },
+    {
+      title: "Content Management Systems",
+      description: "Build custom CMS solutions using Django CMS or Wagtail for content-driven websites.",
+      features: ["Content editing", "Multi-language support", "SEO optimization", "User management"]
+    },
+    {
+      title: "Real-time Applications",
+      description: "Develop real-time features using Django Channels for WebSocket communication and live updates.",
+      features: ["WebSocket support", "Live chat", "Real-time notifications", "Async handling"]
+    },
+    {
+      title: "Django Migration & Optimization",
+      description: "Migrate existing applications to Django and optimize performance for better scalability.",
+      features: ["Legacy migration", "Performance tuning", "Database optimization", "Caching strategies"]
+    }
+  ];
+
+  const benefits = [
+    "Rapid Development",
+    "Batteries Included",
+    "Security Features",
+    "Scalable Architecture",
+    "Admin Interface",
+    "ORM System",
+    "Large Community",
+    "Python Ecosystem"
+  ];
+
+  const technologies = [
+    "Django 4.2+",
+    "Django REST Framework",
+    "PostgreSQL",
+    "Redis",
+    "Celery",
+    "Django Channels",
+    "Gunicorn",
+    "Nginx",
+    "Docker",
+    "AWS/GCP",
+    "pytest",
+    "Wagtail CMS"
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Django Development Services
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
+              Build scalable web applications with Django - the Python framework for perfectionists with deadlines
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Start Your Project
+              </Link>
+              <Link
+                href="/pricing"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Django Development Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive Django development solutions for modern web applications
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                      <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Django for Web Development?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Django provides a complete framework for rapid and secure web development
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center p-6 rounded-lg bg-gray-50 hover:bg-green-50 transition-colors">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-lg font-bold">{index + 1}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">{benefit}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Technologies We Use
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Modern Django ecosystem tools and technologies for optimal web development
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+                <h3 className="text-lg font-medium text-gray-900">{tech}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-teal-600 to-green-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Build with Django?
+          </h2>
+          <p className="text-xl mb-8 text-teal-100 max-w-3xl mx-auto">
+            Let&apos;s create powerful, scalable web applications using Django&apos;s proven framework
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default DjangoDevelopmentPage;

@@ -63,14 +63,83 @@ const Navbar = () => {
   ];
 
   const servicesData = {
-    "Web Services": [
+    "Programming Languages": [
       {
-        name: "Web Development",
-        icon: "💻",
-        href: "/services/web-development",
+        name: "Java Development",
+        icon: "☕",
+        href: "/services/java-development",
       },
       {
-        name: "React JS Development",
+        name: "C++ Development",
+        icon: "⚡",
+        href: "/services/cpp-development",
+      },
+      {
+        name: "Python Development",
+        icon: "🐍",
+        href: "/services/python-development",
+      },
+      {
+        name: "JavaScript Development",
+        icon: "🟨",
+        href: "/services/javascript-development",
+      },
+      {
+        name: "TypeScript Development",
+        icon: "🔷",
+        href: "/services/typescript-development",
+      },
+      {
+        name: "C# Development",
+        icon: "🔵",
+        href: "/services/csharp-development",
+      },
+      {
+        name: "PHP Development",
+        icon: "🐘",
+        href: "/services/php-development",
+      },
+      {
+        name: "Ruby Development",
+        icon: "💎",
+        href: "/services/ruby-development",
+      },
+      {
+        name: "Swift Development",
+        icon: "🍎",
+        href: "/services/swift-development",
+      },
+      {
+        name: "Kotlin Development",
+        icon: "🤖",
+        href: "/services/kotlin-development",
+      },
+      { name: "Go Development", icon: "🐹", href: "/services/go-development" },
+      {
+        name: "Rust Development",
+        icon: "🦀",
+        href: "/services/rust-development",
+      },
+      {
+        name: "Dart Development",
+        icon: "🎯",
+        href: "/services/dart-development",
+      },
+      {
+        name: "Scala Development",
+        icon: "⚖️",
+        href: "/services/scala-development",
+      },
+      { name: "R Development", icon: "📊", href: "/services/r-development" },
+      {
+        name: "Solidity Development",
+        icon: "⛓️",
+        href: "/services/solidity-development",
+      },
+    ],
+    "Frameworks & Libraries": [
+      {
+        name: "React Development",
         icon: "⚛️",
         href: "/services/react-development",
       },
@@ -80,128 +149,9 @@ const Navbar = () => {
         href: "/services/angular-development",
       },
       {
-        name: "Node.js Development",
-        icon: "🟢",
-        href: "/services/nodejs-development",
-      },
-      {
-        name: "PHP Development",
-        icon: "🐘",
-        href: "/services/php-development",
-      },
-      {
-        name: "Java Development",
-        icon: "☕",
-        href: "/services/java-development",
-      },
-      {
-        name: "Blockchain Development",
-        icon: "⛓️",
-        href: "/services/blockchain-development",
-      },
-      {
-        name: "Python Development",
-        icon: "🐍",
-        href: "/services/python-development",
-      },
-      {
-        name: "WordPress Development",
-        icon: "📝",
-        href: "/services/wordpress-development",
-      },
-      {
-        name: "Shopify Development",
-        icon: "🛒",
-        href: "/services/shopify-development",
-      },
-    ],
-    "Mobile Services": [
-      {
-        name: "Mobile App Development",
-        icon: "📱",
-        href: "/services/mobile-app-development",
-      },
-      {
-        name: "Native App Development",
-        icon: "📲",
-        href: "/services/native-app-development",
-      },
-      {
-        name: "iOS App Development",
-        icon: "🍎",
-        href: "/services/ios-development",
-      },
-      {
-        name: "Android App Development",
-        icon: "🤖",
-        href: "/services/android-development",
-      },
-      {
-        name: "Hybrid App Development",
-        icon: "🔄",
-        href: "/services/hybrid-development",
-      },
-      {
-        name: "Flutter App Development",
-        icon: "🦋",
-        href: "/services/flutter-development",
-      },
-      {
-        name: "React Native App Development",
-        icon: "⚛️",
-        href: "/services/react-native-development",
-      },
-    ],
-    "AI Services": [
-      {
-        name: "Artificial Intelligence",
-        icon: "🤖",
-        href: "/services/artificial-intelligence",
-      },
-      {
-        name: "Machine Learning",
-        icon: "🧠",
-        href: "/services/machine-learning",
-      },
-      { name: "Data Science", icon: "📊", href: "/services/data-science" },
-      { name: "Open AI", icon: "🔮", href: "/services/open-ai" },
-      { name: "Automation", icon: "⚙️", href: "/services/automation" },
-    ],
-    "Design Services": [
-      { name: "Web Designing", icon: "🎨", href: "/services/web-designing" },
-      {
-        name: "HTML/CSS Development",
-        icon: "📄",
-        href: "/services/html-css-development",
-      },
-      { name: "UI/UX Designs", icon: "✨", href: "/services/ui-ux-designs" },
-      {
-        name: "Mobile App Designs",
-        icon: "🎯",
-        href: "/services/mobile-app-designs",
-      },
-      { name: "Logo Designs", icon: "🏷️", href: "/services/logo-designs" },
-      {
-        name: "Brochure Designs",
-        icon: "📋",
-        href: "/services/brochure-designs",
-      },
-    ],
-    "Language Services": [
-      {
-        name: "JavaScript Development",
-        icon: "🟨",
-        href: "/services/javascript-development",
-      },
-      {
-        name: "TypeScript Development",
-        icon: "�",
-        href: "/services/typescript-development",
-      },
-      {
-        name: "Dart Programming",
-        icon: "🎯",
-        href: "/services/dart-development",
+        name: "Vue.js Development",
+        icon: "💚",
+        href: "/services/vuejs-development",
       },
       {
         name: "Next.js Development",
@@ -209,24 +159,218 @@ const Navbar = () => {
         href: "/services/nextjs-development",
       },
       {
-        name: "Go Development",
-        icon: "🐹",
-        href: "/services/go-development",
+        name: "Node.js Development",
+        icon: "💚",
+        href: "/services/nodejs-development",
       },
       {
-        name: "Python Development",
+        name: "Django Development",
         icon: "🐍",
-        href: "/services/python-development",
+        href: "/services/django-development",
       },
       {
-        name: "Java Development",
-        icon: "☕",
-        href: "/services/java-development",
+        name: "Flask Development",
+        icon: "🔥",
+        href: "/services/flask-development",
+      },
+      {
+        name: "Spring Boot Development",
+        icon: "🍃",
+        href: "/services/spring-boot-development",
       },
       {
         name: "Laravel Development",
         icon: "🔴",
         href: "/services/laravel-development",
+      },
+      { name: "Ruby on Rails", icon: "🚆", href: "/services/rails-development" },
+      {
+        name: "ASP.NET Development",
+        icon: "🔵",
+        href: "/services/aspnet-development",
+      },
+      {
+        name: "Flutter Development",
+        icon: "🦋",
+        href: "/services/flutter-development",
+      },
+      {
+        name: "React Native Development",
+        icon: "⚛️",
+        href: "/services/react-native-development",
+      },
+      {
+        name: "Unity Development",
+        icon: "🎮",
+        href: "/services/unity-development",
+      },
+      {
+        name: "TensorFlow Development",
+        icon: "🧠",
+        href: "/services/tensorflow-development",
+      },
+      {
+        name: "PyTorch Development",
+        icon: "🔥",
+        href: "/services/pytorch-development",
+      },
+    ],
+    "Solution & Service Types": [
+      {
+        name: "MVP Development",
+        icon: "🚀",
+        href: "/services/mvp-development",
+      },
+      {
+        name: "Custom Software Development",
+        icon: "⚙️",
+        href: "/services/custom-software-development",
+      },
+      {
+        name: "Web Application Development",
+        icon: "🌐",
+        href: "/services/web-development",
+      },
+      {
+        name: "Mobile App Development",
+        icon: "📱",
+        href: "/services/mobile-app-development",
+      },
+      {
+        name: "API Development",
+        icon: "🔗",
+        href: "/services/api-development",
+      },
+      {
+        name: "SaaS Development",
+        icon: "☁️",
+        href: "/services/saas-development",
+      },
+      {
+        name: "E-commerce Development",
+        icon: "🛒",
+        href: "/services/ecommerce-development",
+      },
+      { name: "CMS Development", icon: "📝", href: "/services/cms-development" },
+      { name: "UI/UX Design", icon: "🎨", href: "/services/ui-ux-designs" },
+      {
+        name: "DevOps Services",
+        icon: "🔧",
+        href: "/services/devops-services",
+      },
+      {
+        name: "Cloud Migration",
+        icon: "☁️",
+        href: "/services/cloud-migration",
+      },
+      {
+        name: "AI/ML Solutions",
+        icon: "🤖",
+        href: "/services/artificial-intelligence",
+      },
+      {
+        name: "Blockchain Development",
+        icon: "⛓️",
+        href: "/services/blockchain-development",
+      },
+      {
+        name: "IoT Development",
+        icon: "🌐",
+        href: "/services/iot-development",
+      },
+      {
+        name: "AR/VR Development",
+        icon: "🥽",
+        href: "/services/ar-vr-development",
+      },
+      {
+        name: "Game Development",
+        icon: "🎮",
+        href: "/services/game-development",
+      },
+    ],
+    "Platforms & Devices": [
+      {
+        name: "Web Development",
+        icon: "🌐",
+        href: "/services/web-development",
+      },
+      {
+        name: "iOS Development",
+        icon: "🍎",
+        href: "/services/ios-development",
+      },
+      {
+        name: "Android Development",
+        icon: "🤖",
+        href: "/services/android-development",
+      },
+      {
+        name: "Cross-Platform Development",
+        icon: "🔄",
+        href: "/services/cross-platform-development",
+      },
+      {
+        name: "Desktop Applications",
+        icon: "🖥️",
+        href: "/services/desktop-development",
+      },
+      {
+        name: "Progressive Web Apps",
+        icon: "📱",
+        href: "/services/pwa-development",
+      },
+      {
+        name: "Smart TV Applications",
+        icon: "📺",
+        href: "/services/smart-tv-development",
+      },
+      {
+        name: "Wearables Development",
+        icon: "⌚",
+        href: "/services/wearables-development",
+      },
+      {
+        name: "Embedded Systems",
+        icon: "🔌",
+        href: "/services/embedded-development",
+      },
+    ],
+    "CMS & E-commerce": [
+      {
+        name: "WordPress Development",
+        icon: "🅿️",
+        href: "/services/wordpress-development",
+      },
+      {
+        name: "Shopify Development",
+        icon: "🛒",
+        href: "/services/shopify-development",
+      },
+      {
+        name: "Magento Development",
+        icon: "🛍️",
+        href: "/services/magento-development",
+      },
+      {
+        name: "Drupal Development",
+        icon: "💧",
+        href: "/services/drupal-development",
+      },
+      {
+        name: "WooCommerce Development",
+        icon: "🛒",
+        href: "/services/woocommerce-development",
+      },
+      {
+        name: "BigCommerce Development",
+        icon: "🏪",
+        href: "/services/bigcommerce-development",
+      },
+      {
+        name: "Custom E-commerce",
+        icon: "🛒",
+        href: "/services/custom-ecommerce",
       },
     ],
   };
@@ -323,15 +467,15 @@ const Navbar = () => {
 
                       {/* Services Dropdown */}
                       {item.isServices && isServicesOpen && (
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-[1200px] bg-white rounded-2xl shadow-xl border border-gray-100 p-8 z-50">
-                          <div className="grid grid-cols-5 gap-8">
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-[1400px] bg-white rounded-2xl shadow-xl border border-gray-100 p-8 z-50">
+                          <div className="grid grid-cols-3 gap-8">
                             {Object.entries(servicesData).map(
                               ([category, services]) => (
                                 <div key={category}>
                                   <h3 className="text-sm font-semibold text-blue-600 mb-4 pb-2 border-b border-gray-100">
                                     {category}
                                   </h3>
-                                  <ul className="space-y-3">
+                                  <ul className="space-y-2 max-h-80 overflow-y-auto">
                                     {services.map((service) => (
                                       <li key={service.name}>
                                         <Link
