@@ -18,23 +18,51 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.websiteprogrammingdevelopment.com"),
   title: {
     default:
       "WP Development - Professional Web & Mobile App Development Services",
     template: "%s | WP Development",
   },
   description:
-    "Professional web and mobile app development services. Expert solutions for React, Next.js, Flutter, iOS, Android, and full-stack development. Custom software development for modern businesses.",
-  keywords:
-    "web development, mobile app development, React, Next.js, Flutter, iOS, Android, TypeScript, JavaScript, Node.js, Python, full-stack development, custom software, MVP development",
+    "Professional web and mobile app development services. Expert solutions for React, Next.js, Flutter, iOS, Android, AI/ML, blockchain, e-commerce, and full-stack development. Custom software development for modern businesses.",
+  keywords: [
+    "web development",
+    "mobile app development",
+    "React development",
+    "Next.js development",
+    "Flutter development",
+    "iOS development",
+    "Android development",
+    "AI development",
+    "machine learning",
+    "blockchain development",
+    "e-commerce development",
+    "custom software development",
+    "full-stack development",
+    "TypeScript development",
+    "JavaScript development",
+    "Python development",
+    "Node.js development",
+    "UI/UX design",
+    "progressive web apps",
+    "cloud migration",
+    "IoT development",
+    "game development",
+    "enterprise software",
+    "startup development",
+    "MVP development",
+  ],
   authors: [{ name: "WP Development Team" }],
   creator: "WP Development",
   publisher: "WP Development",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  category: "technology",
   robots: "index,follow",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-      "https://www.websiteprogrammingdevelopment.com"
-  ),
   alternates: {
     canonical: "/",
   },
@@ -46,7 +74,7 @@ export const metadata: Metadata = {
     title:
       "WP Development - Professional Web & Mobile App Development Services",
     description:
-      "Expert web and mobile app development services. Custom React, Next.js, Flutter solutions for modern businesses.",
+      "Expert web and mobile app development services. Custom React, Next.js, Flutter, AI/ML, blockchain, e-commerce, IoT, and game development solutions for modern businesses.",
     images: [
       {
         url: "/logo/websiteprogrammingdevelopmentlogo.png",
