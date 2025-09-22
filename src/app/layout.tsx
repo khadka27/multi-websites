@@ -6,6 +6,7 @@ import SocialSidebar from "../components/SocialSidebar";
 import Footer from "../components/Footer";
 import StructuredData from "../components/StructuredData";
 import { structuredDataSchemas } from "../lib/seo";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -125,6 +126,9 @@ export default function RootLayout({
         <SocialSidebar />
         <main className="relative">{children}</main>
         <Footer />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
       </body>
     </html>
   );
