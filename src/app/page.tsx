@@ -15,7 +15,7 @@ import Features from "../components/Features";
 import PricingCTA from "../components/PricingCTA";
 import StructuredData from "../components/StructuredData";
 import { structuredDataSchemas } from "../lib/seo";
-import GA4TestComponent from "../components/GA4TestComponent";
+// import GA4TestComponent from "../components/GA4TestComponent";
 
 export const metadata: Metadata = {
   title: "WP Development - Professional Web & Mobile App Development Services",
@@ -120,11 +120,7 @@ export default function Home() {
       <Hero />
       <Stats />
       {/* Temporary GA4 Testing Component - Remove after testing */}
-      <div className="py-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <GA4TestComponent />
-        </div>
-      </div>
+ 
       <WhyChoose />
       <WhyFoundersTrust />
       <WebDevelopmentProcess />
